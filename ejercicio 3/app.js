@@ -1,7 +1,12 @@
 try {
-  x = prompt('Ingrese el numero "x"');
-  y = prompt('Ingrese el numero "y"');
-  z = prompt('Ingrese el  numero "z"');
+  do {
+    x = Number(prompt('Ingrese el numero "x"'));
+    y = Number(prompt('Ingrese el numero "y"'));
+    z = Number(prompt('Ingrese el  numero "z"'));
+    if (isNaN(x) || isNaN(y) || isNaN(z)) {
+      alert("ha ingresado un valor NaN, intentelo denuevo");
+    }
+  } while (isNaN(x) || isNaN(y) || isNaN(z));
   var mayor = x;
 
   if (y > mayor) {
@@ -29,6 +34,6 @@ try {
       document.write('"y" y "z" son iguales <br>');
     }
   }
-  console.log('El numero mayor es: ' + mayor);
+  console.log("El numero mayor es: " + mayor);
   document.write("El numero mayor es: " + mayor + "<br>");
 }
